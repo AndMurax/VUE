@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Referencia do video https://youtu.be/6YLJH6k_ZE8?list=PLXik_5Br-zO_xQHAH9GrNR1gAefYWaKxz -->
+    <script src="../../vue.js"></script>
+    <title>VUE JS</title>
+</head>
+<body>
+    
+    <!-- Colocando o nome da Instancia como root-->
+
+    <div id="root"> 
+       O meu nome é {{nome}}.
+    </div>
+
+    <script>
+         // por boa pratrica sempre colocar nome na instacia do VUE
+         //root é nome da instacia
+
+         let root = new Vue({
+
+            // Para que instancia div id="root" vue seja associada corretamente, deve colocar o el: de element e dentro desse elemento pode colocar, onde pode ser um string, valor numérico e Array. Nesse caso vamos utilizar uma string é informar o elemento do HTML que indentifique esse elemento que irá ficar instaciado a instacia da Vue, para essa indentificação podemos utilizar o mesmo tipo de indentificação do selectos utilizado no CSS.
+
+            //Com isso, a instancia está associada para apresentar a viwer dentro da div.
+
+            el: "#root",
+            // Agora vamos adicionar o data: o que coloca dentro do data são as minhas váriaveis da minha instacia Vue.  
+
+            data: {
+                nome: "Anderson Conceição"
+            }
+         });  
+         
+    </script>
+</body>
+</html>

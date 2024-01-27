@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Video aula 06 </title>
+
+    <script src="../../vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <p>{{nome}}</p>
+        <!-- https://youtu.be/Ic57QAoK5lI?list=PLXik_5Br-zO_xQHAH9GrNR1gAefYWaKxz&t=187 motivo ao v-model -->
+        <input v-model="nome">
+        <div v-if="nome == 'Anderson'">
+            <h4>Conteúdo</h4>
+        </div>
+        <div v-else="visivel">
+            <H1> Não vai aparecer</H1>
+        </div>
+    </div>
+    <script>
+        let root = new Vue({
+            el: "#root",
+            data: {
+             nome: "Anderson",
+             visivel: false
+            }
+        });
+    </script>    
+</body>
+</html>
